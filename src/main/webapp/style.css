@@ -56,6 +56,30 @@ img {
 
 }
 
+main form{
+    width: 50%;
+    margin: auto;
+}
+
+main article {
+    margin: auto;
+    width: 80%;
+}
+
+main input {
+    display: block;
+    width: 90%;
+}
+
+p {
+    margin-top: 1em;
+}
+
+h1,h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 
 
 

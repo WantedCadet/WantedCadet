@@ -15,8 +15,8 @@
     <nav>
         <ul>
             <li class="hier"><a href="index.jsp">Home</a></li>
-            <li><a href="voegtoe.jsp"></a>Voeg toe</li>
-            <li><a href="overzicht.jsp"></a>Overzicht</li>
+            <li><a href="voegtoe.jsp"> Voeg toe</a></li>
+            <li><a href="Servlet"> Overzicht</a></li>
         </ul>
     </nav>
 </header>

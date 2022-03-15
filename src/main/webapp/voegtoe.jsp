@@ -22,27 +22,31 @@
     <ul>
         <li><a href="index.jsp">Home</a></li>
         <li class="hier"><a href="voegtoe.jsp">Voeg toe</a></li>
-        <li><a href="overzicht.jsp">Overzicht</a></li>
+        <li><a href="Servlet">Overzicht</a></li>
     </ul>
 </nav>
 </header>
 <main>
-    <p>
-        <label for="naam">Naam</label>
-        <input type="text" id="naam" placeholder="" required>
-    </p>
-    <p>
-        <label for="prijs">Prijs</label>
-        <input type="text" id="prijs" placeholder="" required>
-    </p>
-    <p>
-        <label for="productiejaar">Productiejaar</label>
-        <input type="text" id="productiejaar" placeholder="" required>
-    </p>
+    <form>
 
-    <p>
-        <input type="submit" value="Submit" >
-    </p>
+        <p>
+            <label for="naam">Naam</label>
+            <input type="text" id="naam" placeholder="" required>
+        </p>
+        <p>
+            <label for="prijs">Prijs</label>
+            <input type="text" id="prijs" placeholder="" required>
+        </p>
+        <p>
+            <label for="productiejaar">Productiejaar</label>
+            <input type="text" id="productiejaar" placeholder="" required>
+        </p>
+
+        <p>
+            <input type="submit" value="Submit" >
+        </p>
+
+    </form>
 </main>
 
 </body>

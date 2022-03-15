@@ -1,4 +1,5 @@
-<%--
+<%@ page import="domain.model.Telefoon" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: Gebruiker
   Date: 27-2-2022
@@ -23,47 +24,37 @@
     <ul>
         <li><a href="index.jsp">Home</a></li>
         <li><a href="voegtoe.jsp"> Voeg toe</a></li>
-        <li class="hier"><a href="overzicht.jsp">Overzicht</a></li>
+        <li class="hier"><a href="Servlet">Overzicht</a></li>
     </ul>
 </nav>
 </header>
 <main>
     <table>
+        <thead>
+            <tr>
+                <th>Naam</th>
+                <th>Prijs</th>
+                <th>Productiejaar</th>
+                <th>Pas aan</th>
+                <th>Verwijder</th>
+            </tr>
+        </thead>
+        <tbody>
+        <%
+            ArrayList<Telefoon> telefoons = (ArrayList<Telefoon>) request.getAttribute("telefoonlijst");
+            for (Telefoon t : telefoons) {
+        %>
         <tr>
-            <th>Naam</th>
-            <th>Prijs</th>
-            <th>Productiejaar</th>
-            <th>Pas aan</th>
-            <th>Verwijder</th>
+            <td><%= t.getNaam()%></td>
+            <td><%= t.getPrijs()%></td>
+            <td><%= t.getProductiejaar()%></td>
+            <td>Wijzig</td>
+            <td>Verwijder</td>
         </tr>
-        <tr>
-            <th>Iphone</th>
-            <th>€ 909</th>
-            <th>2021</th>
-            <th>Pas aan</th>
-            <th> >x< </th>
-        </tr>
-        <tr>
-            <th>Huawei</th>
-            <th>€ 1200</th>
-            <th>2021</th>
-            <th>Pas aan</th>
-            <th> >x< </th>
-        </tr>
-        <tr>
-            <th>Oppo</th>
-            <th>€ 1149</th>
-            <th>2021</th>
-            <th>Pas aan</th>
-            <th> >x< </th>
-        </tr>
-        <tr>
-            <th>Samsung</th>
-            <th>€ 409</th>
-            <th>2021</th>
-            <th>Pas aan</th>
-            <th> >x< </th>
-        </tr>
+        <%
+            }
+        %>
+        </tbody>
 
 
     </table>
