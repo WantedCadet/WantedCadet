@@ -22,6 +22,31 @@ public class Servlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String naam = request.getParameter("naam");
+        String prijsAlsString = request.getParameter("prijs");
+        String productiejaarAlsString = request.getParameter("productiejaar");
+
+        try {
+            int prijs = Integer.parseInt(prijsAlsString);
+            int productiejaar =  Integer.parseInt(productiejaarAlsString);
+            Telefoon telefoon = new Telefoon();
+            telefoon.setNaam(naam);
+            telefoon.setPrijs(prijs);
+            telefoon.setProductiejaar(productiejaar);
+
+            telefoonDB.add(telefoon);
+
+            request.setAttribute("telefoon", telefoonDB.getTelefoons());
+            RequestDispatcher view = request.getRequestDispatcher("overzicht.jsp");
+            view.forward(request, response);
+        }
+
+        catch (Exception e){
+            RequestDispatcher view = request.getRequestDispatcher("voegtoe.jsp");
+            view.forward(request, response);
+
+        }
+
 
     }
 }

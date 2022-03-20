@@ -19,6 +19,7 @@ public class TelefoonDB {
         add(samsung);
     }
 
+
     public void add(Telefoon telefoon) {
         if (telefoon == null)
             throw new IllegalArgumentException("telefoon mag niet null zijn");

@@ -27,19 +27,19 @@
 </nav>
 </header>
 <main>
-    <form>
+    <form action="Servlet" method="post">
 
         <p>
             <label for="naam">Naam</label>
-            <input type="text" id="naam" placeholder="" required>
+            <input type="text" id="naam"  name="naam" >
         </p>
         <p>
             <label for="prijs">Prijs</label>
-            <input type="text" id="prijs" placeholder="" required>
+            <input type="text" id="prijs" name="prijs" >
         </p>
         <p>
             <label for="productiejaar">Productiejaar</label>
-            <input type="text" id="productiejaar" placeholder="" required>
+            <input type="text" id="productiejaar" name="productiejaar" >
         </p>
 
         <p>

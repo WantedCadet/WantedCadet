@@ -6,6 +6,10 @@ public class Telefoon {
     private int prijs;
     private int productiejaar;
 
+    public Telefoon(){
+
+    }
+
     public Telefoon(String naam, int prijs, int productiejaar) {
         setNaam(naam);
         setPrijs(prijs);
